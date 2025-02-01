@@ -8,6 +8,8 @@ from time import sleep
 
 import PIL.Image
 
+apikey = "API_KEY" # Replace with your own API key
+
 def speak(text):
     engine = pyttsx3.init()
 
@@ -37,7 +39,7 @@ chat = menu([
     ])
 
 if chat == 1:
-    genai.configure(api_key="AIzaSyAnyfAegZYMv4smQRDDfhVYGrGRWzl7UhE")
+    genai.configure(api_key=apikey)
 
     model=genai.GenerativeModel(
       model_name="gemini-1.5-flash",
@@ -55,7 +57,7 @@ if chat == 1:
             control.typewrite(chunk.text)
             
 if chat == 2:
-    genai.configure(api_key="AIzaSyAnyfAegZYMv4smQRDDfhVYGrGRWzl7UhE")
+    genai.configure(api_key=apikey)
 
     model=genai.GenerativeModel(
       model_name="gemini-1.5-flash",
@@ -83,7 +85,7 @@ if chat == 3:
         "Mark - Computer help expert, has been working with computers since 4 years old, kind, helpful, nice, patient"
         ])
     if char == 1:
-        genai.configure(api_key="AIzaSyAnyfAegZYMv4smQRDDfhVYGrGRWzl7UhE")
+        genai.configure(api_key=apikey)
 
         model=genai.GenerativeModel(
           model_name="gemini-1.5-flash",
@@ -107,7 +109,7 @@ if chat == 3:
             "You are named Mark. You are a computer help expert, who has been working with computers since you were 4 years old. You are now 27. You are kind, helpful, nice, and especially patient with the user."
             ]
         instructions = personalities[char - 1]
-        genai.configure(api_key="AIzaSyAnyfAegZYMv4smQRDDfhVYGrGRWzl7UhE")
+        genai.configure(api_key=apikey)
 
         model=genai.GenerativeModel(
           model_name="gemini-1.5-flash",
@@ -125,7 +127,7 @@ if chat == 3:
             #speak(response.text)
 
 if chat == 4:
-    genai.configure(api_key="AIzaSyAnyfAegZYMv4smQRDDfhVYGrGRWzl7UhE")
+    genai.configure(api_key=apikey)
     
     model=genai.GenerativeModel(
         model_name="gemini-1.5-flash",  # or "gemini-2.0-flash-thinking-exp-01-21"
@@ -166,7 +168,7 @@ if chat == 4:
                 print(f"Error processing action '{action}': {e}")
 
 if chat == 5:
-    genai.configure(api_key="AIzaSyAnyfAegZYMv4smQRDDfhVYGrGRWzl7UhE")
+    genai.configure(api_key=apikey)
 
     model=genai.GenerativeModel(
       model_name="gemini-1.5-flash",
