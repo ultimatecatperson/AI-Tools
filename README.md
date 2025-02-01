@@ -21,11 +21,19 @@ Open Terminal (macOS, Windows) or Command line (Linux), and enter the following 
 
 `pip install pyautogui`
 
+`pip install Pillow`
+
+`pip install pyttsx3`
+
 and if that doesn't work, try
 
 `pip3 install -q -U google-generativeai`
 
 `pip3 install pyautogui`
+
+`pip3 install Pillow`
+
+`pip3 install pyttsx3`
 
 The first command is absolutely required. This will allow you to use Google Gemini through my app. The second command is required only is you want Gemini to be able to use your keyboard and mouse. If you don't install it, then you'd have to delete the `import pyautogui as control` line in the code, and then you can only use the chatbot.
 
