@@ -1,4 +1,3 @@
-catstudio
 # AI-Tools
 
 # How to set up
