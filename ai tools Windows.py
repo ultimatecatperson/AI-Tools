@@ -1,3 +1,8 @@
+# catstudio
+# AI Tools
+
+# Windows and Linux
+
 import google.generativeai as genai
 
 import pyautogui as control
@@ -182,7 +187,7 @@ if chat == 5:
         response = chat.send_message(input("What do you want me to find out, or search for on the web?\n"))
         control.click(x=None, y=None, button='left')
         for query in response.text.split("\n"):
-            control.hotkey("command", "t")
+            control.hotkey("control", "t")
             sleep(0.2)
             control.typewrite(query, interval=0.02)
             sleep(0.02)
