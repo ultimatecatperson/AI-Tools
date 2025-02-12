@@ -1,3 +1,8 @@
+# catstudio
+# AI Tools
+
+# macOS
+
 import google.generativeai as genai
 
 import pyautogui as control
