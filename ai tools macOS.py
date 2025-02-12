@@ -15,7 +15,8 @@ import PIL.Image
 
 apikey = "API_KEY" # Replace with your own API key
 
-def speak(text):
+def speak(text): # You may add this function anywhere in the code to have your computer speak.
+    # This will use the voice you have set in System Settings > Accessibility > Spoken Content > Voice.
     engine = pyttsx3.init()
 
     # Customize voice, rate, and volume
