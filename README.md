@@ -16,6 +16,8 @@ Click the Python file that shows your OS, then "Download".
 
 Open Terminal (macOS, Windows) or Command line (Linux), and enter the following commands:
 
+If you are using Windows and you did not already have Python, you will need to add the path for it to your PATH environmental variable.
+
 ```bash
 pip install -q -U google-generativeai
 ```
