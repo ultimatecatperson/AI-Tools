@@ -1,8 +1,3 @@
-# catstudio
-# AI Tools
-
-# Windows and Linux
-
 import google.generativeai as genai
 
 import pyautogui as control
@@ -40,7 +35,8 @@ chat = menu([
     "Message sender - AI writes and automatically sends messages",
     "AI Chatbot - Pick a character and start chatting, or create your own",
     "Auto control - AI controls your computer based on a prompt",
-    "Search buddy - AI searches the web for you with search queries"
+    "Search buddy - AI searches the web for you with search queries",
+    "File editor - AI edits your very own files that you give it"
     ])
 
 if chat == 1:
@@ -193,4 +189,33 @@ if chat == 5:
             sleep(0.02)
             control.press("return")
             sleep(0.2)
+
+if chat == 6:
+    genai.configure(api_key=apikey)
+
+    model=genai.GenerativeModel(
+      model_name="gemini-1.5-flash",
+      system_instruction="You are an AI agent that edits files with the user. The user will give you a prompt on the first line, then give you the whole file content. You shall return the entire new file content only, because it will automatically delete the file's content and replace it with your response.")
+    chat = model.start_chat(
+        history=[
+            
+        ]
+    )
+
+    path = str(input("Your file's path: "))
+
+    while True:
+        with open(path, "r") as file:
+            content = file.read()
+            print(content)
+
+        response = chat.send_message(f"""{input("Prompt: ")}
+
+    {content}
+    """)
+        with open(path, "w") as file:
+            file.write(response.text)
+
+        print()
+
     
